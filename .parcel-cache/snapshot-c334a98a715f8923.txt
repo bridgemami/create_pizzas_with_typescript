@@ -1,0 +1,27 @@
+26
+71C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\.gitignore133635742004871887 0
+73C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\package.json133635651984271895 0
+65C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\dist133635658974933626 1
+64C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\src133635658086285408 1
+77C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\src\ts\create.ts133635647770874389 0
+68C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\db.json133635707239856724 0
+78C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\package-lock.json133635651985793867 0
+70C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\README.md133635731272230489 0
+76C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\src\create.html133635658971561012 0
+75C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\src\index.html133635724870152401 0
+71C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\src\styles133635652701805648 1
+87C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\dist\index.891f0f0b.js.map133635658974666767 0
+88C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\dist\create.6789991c.js.map133635658974666767 0
+67C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\src\ts133635708390133634 1
+76C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\src\ts\index.ts133636536275914217 0
+74C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\src\ts\models133635708509433146 1
+83C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\dist\index.891f0f0b.js133635658974596765 0
+84C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\dist\create.6789991c.js133635658974564532 0
+76C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\src\ts\services133635703248208331 1
+92C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\src\ts\services\DataResource.ts133636533975095075 0
+83C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\src\ts\models\Pizza.ts133635712014257035 0
+82C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\src\styles\styles.css133635647288030454 0
+77C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\dist\create.html133635658974788599 0
+84C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\dist\index.3b8f328d.css133635658974880167 0
+88C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\dist\index.3b8f328d.css.map133635658974921440 0
+76C:\Users\mdbri\Documents\Ninja\create_pizzas_with_typescript\dist\index.html133635658974636779 0

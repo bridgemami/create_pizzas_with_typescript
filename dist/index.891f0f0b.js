@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"4JiOW":[function(require,module,exports) {
+})({"ccido":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -587,7 +587,92 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 //npm init -y
 // parcel - https://parceljs.org/getting-started/webapp/
 //npx parcel src/*.html
+var _pizza = require("./models/Pizza");
+document.addEventListener("DOMContentLoaded", async ()=>{
+    //load the pizza data
+    const pizzas = await (0, _pizza.Pizza).loadAll();
+    console.log(pizzas);
+});
 
-},{}]},["4JiOW","8tyFx"], "8tyFx", "parcelRequiref607")
+},{"./models/Pizza":"85kvU"}],"85kvU":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Pizza", ()=>Pizza);
+var _dataResource = require("../services/DataResource");
+var _dataResourceDefault = parcelHelpers.interopDefault(_dataResource);
+const Pizza = new (0, _dataResourceDefault.default)("http://localhost:3000/pizzas") // Pizza.save({
+ //     title: "Turtles' Pizza",
+ //     description: "TMNT favorite pizza.",
+ //     toppings:["green peppers, olives, mushrooms"],
+ //     price: 20
+ // })
+;
+
+},{"../services/DataResource":"7WAiV","@parcel/transformer-js/src/esmodule-helpers.js":"2Fjyy"}],"7WAiV":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class DataResources {
+    constructor(endpoint){
+        this.endpoint = endpoint;
+    }
+    //json-server --watch db.json
+    async loadAll() {
+        const res = await fetch(this.endpoint);
+        return res.json();
+    }
+    async loadOne(id) {
+        const res = await fetch(`${this.endpoint}/${id}`);
+        return res.json();
+    }
+    async delete(id) {
+        const res = await fetch(`${this.endpoint}/${id}`, {
+            method: "DELETE"
+        });
+        return res;
+    }
+    async save(data) {
+        const res = await fetch(this.endpoint, {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        return res;
+    }
+}
+exports.default = DataResources;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"2Fjyy"}],"2Fjyy":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}]},["ccido","8tyFx"], "8tyFx", "parcelRequiref607")
 
 //# sourceMappingURL=index.891f0f0b.js.map
