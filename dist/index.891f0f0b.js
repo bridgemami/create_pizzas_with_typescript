@@ -588,10 +588,29 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 // parcel - https://parceljs.org/getting-started/webapp/
 //npx parcel src/*.html
 var _pizza = require("./models/Pizza");
+const rootElement = document.querySelector(".root");
+function createPizzaTemplate(pizza) {
+    return `
+    <div class='pizza'>
+    <h2>${pizza.title}</h2>
+    <p class='toppings'>Toppings: ${pizza.toppings.join(", ")}</p>
+    <p class='description>Description: ${pizza.description}.</p>
+    <span class='price'>$${pizza.price}</span>
+    </div>`;
+}
+function renderTemplate(templates, parent) {
+    const templateElement = document.createElement("template");
+    for (const t of templates)templateElement.innerHTML += t;
+    parent.append(templateElement.content);
+}
 document.addEventListener("DOMContentLoaded", async ()=>{
     //load the pizza data
     const pizzas = await (0, _pizza.Pizza).loadAll();
     console.log(pizzas);
+    //create template string for each pizza
+    const pizzaTemplate = pizzas.map((p)=>createPizzaTemplate(p));
+    //render pizza template to DOM
+    renderTemplate(pizzaTemplate, rootElement);
 });
 
 },{"./models/Pizza":"85kvU"}],"85kvU":[function(require,module,exports) {
